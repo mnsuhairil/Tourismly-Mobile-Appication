@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_facilities"
+        android:title="Nearby Facilities" />
+    <item
+        android:id="@+id/action_direction"
+        android:title="Get Directions" />
+    <item
+        android:id="@+id/action_website"
+        android:title="Official Website" />
+    <item
+        android:id="@+id/reviewPlace"
+        android:title="Review Place" />
+</menu>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="font-size: 50px; font-weight: bold;">iTourismly Admin Panel</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .navbar {
+            background-color: #343a40; /* Dark background color for the navbar */
+        }
+
+        .navbar-text {
+            color: #ffffff; /* Text color for the navigation links */
+        }
+        title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+         /* Style for the page title within the content */
+         .page-title {
+            font-size: 200px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="add-place.html">iTourismly Admin Panel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="add-place.html">Add a New Place</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manage-places.html">Manage Places</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4" style="padding-bottom: 50px;">
+        <div class="row">
+            <div class="col-md-12">
+               
+                <div class="content">
+                    <form id="addPlaceForm">
+                        <h1 class="text-center">Add a New Place</h1>
+                        <hr>
+                        <!-- Form content goes here -->
+                        <div class="mb-3">
+                            <label for="placeName" class="form-label">Place Name:</label>
+                            <input type="text" id="placeName" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="placeAddress" class="form-label">Place Address:</label>
+                            <input type="text" id="placeAddress" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="officialWebsite" class="form-label">Official Website Link:</label>
+                            <input type="url" id="officialWebsite" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="eTiketLink" class="form-label">eTiket Website Link:</label>
+                            <input type="url" id="eTiketLink" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="placeImage" class="form-label">Place Image:</label>
+                            <input type="file" id="placeImage" class="form-control" accept="image/*" required>
+                        </div>
+                        <div class="mb-3" style="padding-top: 20px;">
+                        
+                           
+                            <input id="map-search" class="form-control" placeholder="Search for a place">
+                        
+                        <div id="map" style="height: 300px;" class="mb-3"></div>
+                        
+                        <div class="mb-3 text-center">
+                            <button type="submit" style="width: 200px;height: 40px"  class="btn btn-primary">Add Place</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <!-- Right sidebar content goes here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and other dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Include Firebase and Google Maps JavaScript -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage.js"></script>
+    <script type="module" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuBp-Fnefr1Xe5RxLgxMh3D2OzOQzxyaE&libraries=places"></script>
+
+    <script type="module" src="add.js"></script>
+</body>
+</html>

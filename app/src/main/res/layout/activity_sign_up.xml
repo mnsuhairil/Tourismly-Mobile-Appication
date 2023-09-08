@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F4F8"
+    tools:context=".SignUpActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <TextView
+                android:id="@+id/textViewAppName"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="iTourismly"
+                android:textColor="#101213"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/rounded_corner"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create an Account"
+                    android:gravity="center"
+                    android:textColor="#101213"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Let's get started by filling out the form below."
+                    android:textColor="#57636C"
+                    android:textSize="16sp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-medium" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:src="@drawable/default_profile_image"
+                    android:layout_marginTop="12dp"
+                    android:scaleType="centerCrop"/>
+
+                <!-- Customize the AutoCompleteTextView for Email -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutUsername"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:boxCornerRadiusBottomEnd="24dp"
+                    app:boxCornerRadiusBottomStart="24dp"
+                    app:boxCornerRadiusTopEnd="24dp"
+                    app:boxCornerRadiusTopStart="24dp"
+                    app:hintTextColor="@color/teal_200"
+                    app:boxBackgroundColor="@color/teal_200"
+                    app:boxStrokeColor="@color/teal_200"
+                    app:boxStrokeWidth="2dp"
+                    app:boxBackgroundMode="outline">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextViewUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"
+                        android:backgroundTint="@color/white"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="#57636C"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="12dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <!-- Customize the AutoCompleteTextView for Email -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutEmail"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:boxCornerRadiusBottomEnd="24dp"
+                    app:boxCornerRadiusBottomStart="24dp"
+                    app:boxCornerRadiusTopEnd="24dp"
+                    app:boxCornerRadiusTopStart="24dp"
+                    app:hintTextColor="@color/teal_200"
+                    app:boxBackgroundColor="@color/teal_200"
+                    app:boxStrokeColor="@color/teal_200"
+                    app:boxStrokeWidth="2dp"
+                    app:boxBackgroundMode="outline">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextViewEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:backgroundTint="@color/white"
+                        android:inputType="textEmailAddress"
+                        android:textColorHint="#57636C"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="12dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Customize the AutoCompleteTextView for Password -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:boxCornerRadiusBottomEnd="24dp"
+                    app:boxCornerRadiusBottomStart="24dp"
+                    app:boxCornerRadiusTopEnd="24dp"
+                    app:boxCornerRadiusTopStart="24dp"
+                    app:hintTextColor="@color/teal_200"
+                    app:boxBackgroundColor="@color/teal_200"
+                    app:boxStrokeColor="@color/teal_200"
+                    app:boxStrokeWidth="2dp"
+                    app:boxBackgroundMode="outline"
+                    app:endIconMode="password_toggle">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextViewPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:backgroundTint="@color/white"
+                        android:inputType="textPassword"
+                        android:textColorHint="#57636C"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="12dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayoutConfirmPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:boxCornerRadiusBottomEnd="24dp"
+                    app:boxCornerRadiusBottomStart="24dp"
+                    app:boxCornerRadiusTopEnd="24dp"
+                    app:boxCornerRadiusTopStart="24dp"
+                    app:hintTextColor="@color/teal_200"
+                    app:boxBackgroundColor="@color/teal_200"
+                    app:boxStrokeColor="@color/teal_200"
+                    app:boxStrokeWidth="2dp"
+                    app:boxBackgroundMode="outline"
+                    app:endIconMode="password_toggle">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/autoCompleteTextViewConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Confirm Password"
+                        android:backgroundTint="@color/white"
+                        android:inputType="textPassword"
+                        android:textColorHint="#57636C"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:padding="12dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/buttonSignUp"
+                    android:layout_width="230dp"
+                    android:layout_height="52dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="Get Started"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/teal_200"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Already have an account?  "
+                        android:textColor="#101213"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:id="@+id/textViewSignIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sign In here"
+                        android:textColor="@color/teal_200"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PlaceInformationActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingTop="40dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/placeImage"
+            android:layout_width="match_parent"
+            android:layout_height="304dp"
+            android:scaleType="centerCrop"
+            android:background="@color/black" />
+
+        <RelativeLayout
+            android:id="@+id/detailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_below="@+id/placeImage"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/detailsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/detailsLeftLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/placeName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Aquaria"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/buyTicketButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:text="BUY TICKET"
+                        android:textColor="@android:color/white"
+                        android:backgroundTint="#FA6C3F"
+                        android:elevation="3dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Review Section -->
+        <LinearLayout
+            android:id="@+id/ReviewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailsContainer"
+            android:background="@color/teal_200"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+            <!-- Average Review and User Review Count -->
+            <LinearLayout
+                android:id="@+id/layoutId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/averageReviewText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Average Review:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/averageCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="30sp" />
+                <RatingBar
+                    android:id="@+id/averageStarRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:stepSize="0.1"
+                    android:rating="0"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:numStars="5"
+                    android:background="@color/white"
+                    android:isIndicator="true" />
+                <TextView
+                    android:id="@+id/userReviewCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(0 Reviews)"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginTop="4dp" />
+                <!-- RatingBar for Average Star Rating -->
+
+            </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- Average Review and User Review Count -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:paddingStart="10dp">
+
+                <TextView
+                    android:id="@+id/descTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ratings and reviews are verified and are from people who use the same type of device that you use."
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="normal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:background="@color/white"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_below="@id/ReviewContainer"
+            tools:listitem="@layout/review_items"
+            />
+    </RelativeLayout>
+
+</ScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:minHeight="?android:attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_arrow_back"
+            />
+        <ImageView
+            android:id="@+id/menuButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:paddingEnd="10dp"
+            android:src="@drawable/ic_menu"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:paddingTop="40dp"
+        android:visibility="gone" />
+
+
+
+</RelativeLayout>

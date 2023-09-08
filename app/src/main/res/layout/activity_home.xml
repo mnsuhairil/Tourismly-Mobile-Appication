@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".HomeActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <!-- Hello Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello,"
+            style="@style/BodyMediumTextStyle"
+            android:layout_weight="1"
+            android:paddingStart="7dp"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            />
+
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#ED1414"
+                android:text="Logout"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!-- Where would you like to go? Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Where would you like to go?"
+            android:paddingStart="7dp"
+            style="@style/BodyMediumTextStyle" />
+
+        <!-- Popular in Kuala Lumpur, Malaysia Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular in Kuala Lumpur, Malaysia"
+            style="@style/SuccessBodyMediumTextStyle"
+            android:paddingTop="30dp"
+            android:paddingStart="7dp"
+            android:paddingBottom="6dp"
+            android:textAlignment="center" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewPlaces"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_place" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
